@@ -38,9 +38,21 @@ typedef unsigned int u16;
 #define LED_7 P2_6
 #define LED_8 P2_7
 
+/**
+ * @brief 点亮第一个LED
+ */
 void LED_01_ON();
 
+/**
+ * @brief 设置LED 1-8 单个灯亮
+ * @param LED_num
+ */
 void LED_ON(u8 LED_num);
+
+/**
+ * @brief LED 流水灯
+ */
+void LED_circle();
 
 
 #endif

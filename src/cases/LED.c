@@ -4,7 +4,6 @@
 
 /**
  * @brief 点亮第一个LED
- * 
  */
 void LED_01_ON()
 {
@@ -21,7 +20,7 @@ void LED_ON(unsigned char LED_num)
 }
 
 /**
- * @brief LED 流水灯】
+ * @brief LED 流水灯
  */
 void LED_circle()
 {
