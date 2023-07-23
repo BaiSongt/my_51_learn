@@ -1,11 +1,11 @@
-// #include <delay.h>
-
-#include <LED.h>
-
+#include <reg51.h>
+#include "Key.h"
 void main()
 {
-    while (1)
-    {
-        LED_circle();
-    }
+  P2 = ~0x01;
+  while (1)
+  {
+    KEY4_right_move_led();
+    KEY1_left_move_led();
+  }
 }
