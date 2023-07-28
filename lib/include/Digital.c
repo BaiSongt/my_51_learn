@@ -36,4 +36,10 @@ void Nixie(u8 location, u8 Number)
     break;
   }
   P0=NixieTable[Number];
+  u8 time = 10;
+  while (time--)
+  {
+    time--;
+  }
+  P0=0x00; // clear
 }

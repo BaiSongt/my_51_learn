@@ -9,8 +9,8 @@ void main()
   {
     for(u8 i = 0; i <= 8; ++i)
     {
-      Nixie(i,9);
-      delay10us(10000);
+      Nixie(i,i);
+      delay10us(00);
     }
   }
 }
