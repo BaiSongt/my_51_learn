@@ -1,11 +1,16 @@
-#include <reg51.h>
-#include "Key.h"
+// #include <reg51.h>
+#include "Digital.h"
+#include "delay.h"
+
 void main()
 {
-  P2 = ~0x01;
+
   while (1)
   {
-    KEY4_right_move_led();
-    KEY1_left_move_led();
+    for(u8 i = 0; i <= 8; ++i)
+    {
+      Nixie(i,9);
+      delay10us(10000);
+    }
   }
 }
