@@ -26,9 +26,9 @@ P2 端口地址为 0xA0 -> 0xA7 <br>
 - 函数:点亮LED_01<br>
 `void LED_01_ON();`
 - 函数:点亮第n个LED<br>
-`coid LED_ON(u8 LED_num);`
+`void LED_ON(u8 LED_num);`
 - 函数:循环LED 1——>8<br>
-`LED_circle();`
+`void LED_circle();`
 
 ## 2、独立按键
 
@@ -60,13 +60,13 @@ P2 端口地址为 0xA0 -> 0xA7 <br>
 - `function` 独立按键控制第n个 LED <br>
   `void KEY_LED_n();`
 - `function`  KEY_2 控制所有LED 按一下开，按一下关<br>
-`void KEY2_LED_PIN();`
+  `void KEY2_LED_PIN();`
 - `function`  KEY_3 控制LED 显示二进制 <br>
-`void KEY3_show_LED_bin();`
+  `void KEY3_show_LED_bin();`
 - `function`  按一下KEY4 右移LED <br>
-`void KEY4_right_move_led();`
+  `void KEY4_right_move_led();`
 - `function`  按一下KEY1 左移LED <br>
-`void KEY1_left_move_led();`
+  `void KEY1_left_move_led();`
 
 ## 3、数码管
 数码管有共阴极连接，共阳极连接 <br>
@@ -117,4 +117,19 @@ __时序结构__<br>
 // ...
 ```
 - 移屏 0x18
+
+- functions
+```c
+void delay1ms(); //@12.000MHz
+void LCD1602_WriteCommand(u8 com);
+void LCD1602_WriteData(u8 data);
+
+void LCD1602_Init();
+void LCD1602_ShowChar(u8 line, u8 colum, unsigned char _char);
+void LCD1602_ShowString(u8 line, u8 colum,u8 *_str);
+void LCD1602_ShowNum(u8 line, u8 colum, u16 _num, u8 length);
+void LCD1602_ShowSignedNum(u8 line, u8 colum, int _num, u8 length);
+void LCD1602_ShowHexNum(u8 line, u8 colum, u16 _num, u8 length);
+void LCD1602_ShowBinNum(u8 line, u8 colum, u16 _num, u8 length);
+```
 
