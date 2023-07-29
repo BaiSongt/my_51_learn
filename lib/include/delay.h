@@ -16,4 +16,24 @@ void delay10us(u16 time)
   }
 }
 
+void delay_1ms()
+{
+  u8 i, j;
+  i = 2;
+  j = 239;
+  do
+  {
+    while (--j)
+      ;
+  } while (--i);
+}
+
+void delay(u16 times)
+{
+  for (; times > 0; times--)
+  {
+    delay_1ms();
+  }
+}
+
 #endif

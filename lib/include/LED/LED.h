@@ -1,8 +1,6 @@
 #ifndef __LED_H__
 #define __LED_H__
 
-#include <reg51.h>
-
 typedef unsigned char u8;
 typedef unsigned int u16;
 
